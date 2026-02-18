@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mavvey - AI Generator</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+}
+
+h1{
+    font-size:50px;
+    margin-top:40px;
+}
+
+p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+.container{
+    margin-top:40px;
+}
+
+textarea{
+    width:60%;
+    height:120px;
+    border-radius:15px;
+    border:none;
+    padding:15px;
+    font-size:16px;
+    resize:none;
+}
+
+.select-box{
+    margin-top:20px;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 40px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#00c6ff;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0072ff;
+}
+
+.loading{
+    display:none;
+    margin-top:30px;
+    font-size:20px;
+}
+
+.price{
+    margin-top:60px;
+    font-size:22px;
+}
+
+.payment{
+    margin-top:20px;
+}
+
+.payment img{
+    width:60px;
+    margin:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.payment img:hover{
+    transform:scale(1.2);
+}
+
+.footer{
+    margin-top:80px;
+    font-size:14px;
+    opacity:0.8;
+    padding-bottom:30px;
+}
+</style>
+</head>
+<body>
+
+<h1>🚀 Mavvey AI</h1>
+<p>Create stunning AI Images & Videos instantly</p>
+
+<div class="container">
+<textarea placeholder="Describe what you want to generate..."></textarea>
+
+<div class="select-box">
+<label>
+<input type="radio" name="type" value="image" checked> Generate Image
+</label>
+&nbsp;&nbsp;
+<label>
+<input type="radio" name="type" value="video"> Generate Video
+</label>
+</div>
+
+<button onclick="generate()">Generate</button>
+
+<div class="loading" id="loading">
+🐆 AI Jaguar is generating your content...
+</div>
+</div>
+
+<div class="price">
+🔥 1 Month Free – then only 4,99€ / month  
+<br><strong>ONLY FOR A SHORT TIME!</strong>
+</div>
+
+<div class="payment">
+<p>Pay securely with:</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Apple_Pay_logo.svg" onclick="alert('Apple Pay selected')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" onclick="alert('Mastercard selected')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" onclick="alert('Credit Card selected')">
+</div>
+
+<div class="footer">
+when there are problems white the app or you wanna text me about something then text me here  
+<br>
+marwinschurig77@gmail.com
+</div>
+
+<script>
+function generate(){
+    document.getElementById("loading").style.display="block";
+    setTimeout(function(){
+        document.getElementById("loading").innerHTML="✅ Finished!";
+    },4000);
+}
+</script>
+
+</body>
+</html>
